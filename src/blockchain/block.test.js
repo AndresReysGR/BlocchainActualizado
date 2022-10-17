@@ -9,8 +9,8 @@ describe('Block', () => {
     beforeEach(() => {
         timestamp = new Date(2010, 0, 1);
         previousBlock = Block.genesis;
-        data = 'transaction0';
-        hash = 'hash0';
+        data = 'transct0';
+        hash = "hash0";
     });
 
     it('Crear instancia con parametros', () => {
@@ -32,7 +32,7 @@ describe('Block', () => {
 
     it('usando static hash', () => {
         hash = Block.hash(timestamp, previousBlock.hash, data);
-        const hasOutput = 'f39f983187d88d695f616288c1c4db69f944529480310e0cdc203e2ee794fb14';
+        const hasOutput = "d32a24806ba05e9e78da28f11e7f39acfa027e798ab6686dce96743e5ab0ac9a";
 
         expect(hash).toEqual(hasOutput);
     });
